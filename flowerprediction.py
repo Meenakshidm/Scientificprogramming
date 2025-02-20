@@ -1,4 +1,3 @@
-# Import necessary libraries
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -15,6 +14,8 @@ data = pd.DataFrame(data=iris.data, columns=iris.feature_names)
 data['target'] = iris.target  # Add the target column 
 
 # Display the first 5 rows of the dataset
+data['target'] = iris.target 
+
 print("First 5 rows of the dataset:")
 print(data.head())
 
