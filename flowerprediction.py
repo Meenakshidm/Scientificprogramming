@@ -11,6 +11,9 @@ iris = load_iris()
 
 # Create a DataFrame for better visualization
 data = pd.DataFrame(data=iris.data, columns=iris.feature_names)
+data['target'] = iris.target  # Add the target column 
+
+# Display the first 5 rows of the dataset
 data['target'] = iris.target 
 
 print("First 5 rows of the dataset:")
@@ -51,8 +54,4 @@ print(classification_report(y_test, y_pred, target_names=iris.target_names))
 # Plot the decision tree
 plt.figure(figsize=(12, 8))
 plot_tree(dt_classifier, feature_names=iris.feature_names, class_names=iris.target_names, filled=True)
-plt.show()
-
-
- 
-
+plt.show() 
